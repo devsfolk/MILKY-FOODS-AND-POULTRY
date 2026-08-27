@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milky Foods and Poultry | Leading Poultry & Wholesale Meat Supplier in Pakistan</title>
+    <meta name="description" content="Milky Foods & Poultry is a premier Pakistan-based poultry farming, food production, hygienic meat processing, and wholesale distribution enterprise.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        accent: {
+                            600: '#dc2626',
+                            700: '#b91c1c',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-brand-600 selection:text-white">
+
+    <!-- Top Info Bar -->
+    <div class="bg-brand-900 text-gray-200 text-sm py-2 px-4 border-b border-brand-800">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-brand-500"></i> Punjab, Pakistan</span>
+                <span class="hidden md:flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-500"></i> 100% Halal & Hygienic Certified</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="tel:+923000000000" class="hover:text-white transition"><i class="fa-solid fa-phone text-brand-500 mr-1"></i> +92 300 0000000</a>
+                <span class="text-brand-700">|</span>
+                <a href="mailto:info@milkyfoods.pk" class="hover:text-white transition"><i class="fa-solid fa-envelope text-brand-500 mr-1"></i> info@milkyfoods.pk</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 bg-brand-800 rounded-xl flex items-center justify-center text-white font-bold text-2xl shadow-md group-hover:bg-brand-700 transition">
+                        <i class="fa-solid fa-drumstick-bite"></i>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-2xl font-extrabold text-brand-900 tracking-tight leading-none">MILKY</span>
+                        <span class="text-xs font-bold text-red-600 tracking-widest uppercase">Foods & Poultry</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden lg:flex items-center gap-8 font-medium text-gray-700">
+                    <a href="#about" class="hover:text-brand-700 transition py-2">About</a>
+                    <a href="#farms" class="hover:text-brand-700 transition py-2">Our Farms</a>
+                    <a href="#sheds" class="hover:text-brand-700 transition py-2">Controlled Sheds</a>
+                    <a href="#process" class="hover:text-brand-700 transition py-2">Farm to Supply</a>
+                    <a href="#products" class="hover:text-brand-700 transition py-2">Products</a>
+                    <a href="#wholesale" class="hover:text-brand-700 transition py-2">Wholesale</a>
+                    <a href="#facilities" class="hover:text-brand-700 transition py-2">Facilities</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="#contact" class="bg-brand-700 hover:bg-brand-800 text-white px-5 py-2.5 rounded-lg font-semibold shadow-md shadow-brand-700/20 transition flex items-center gap-2">
+                        <i class="fa-solid fa-paper-plane"></i> Inquiry Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">About Us</a>
+            <a href="#farms" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Our Poultry Farms</a>
+            <a href="#sheds" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Controlled Sheds</a>
+            <a href="#process" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Process & Supply</a>
+            <a href="#products" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Our Products</a>
+            <a href="#wholesale" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Wholesale Supply</a>
+            <a href="#facilities" class="block px-3 py-2 rounded-md font-medium text-gray-700 hover:bg-brand-50 hover:text-brand-700">Facilities</a>
+            <a href="#contact" class="block text-center bg-brand-700 text-white px-4 py-2.5 rounded-lg font-semibold shadow mt-4">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- 1. Hero Section -->
+    <section class="relative bg-gradient-to-br from-brand-900 via-brand-800 to-gray-900 text-white py-20 lg:py-28 overflow-hidden">
+        <div class="absolute inset-0 opacity-25">
+            <img src="Images/background-original.jpg" alt="Milky Foods Farm" class="w-full h-full object-cover">
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brand-700/60 backdrop-blur-md border border-brand-500/40 text-brand-100 px-4 py-1.5 rounded-full text-sm font-semibold">
+                        <i class="fa-solid fa-award text-yellow-400"></i> Leading Commercial Poultry Operation in Pakistan
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Modern Poultry Farming & <span class="text-emerald-400">Wholesale Meat</span> Supply
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-200 font-normal leading-relaxed max-w-2xl">
+                        Milky Foods and Poultry operates large-scale environmentally controlled farming facilities across Pakistan, delivering fresh, hygienic, 100% Halal chicken and bulk meat solutions nationwide.
+                    </p>
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#products" class="bg-emerald-500 hover:bg-emerald-600 text-brand-900 font-bold px-8 py-4 rounded-xl shadow-lg hover:shadow-emerald-500/30 transition flex items-center justify-center gap-2">
+                            Explore Products <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#facilities" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
+                            Our Facilities <i class="fa-solid fa-building"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20 group">
+                        <img src="Images/aerial-original.jpg" alt="Aerial View of Milky Foods Farms" class="w-full h-auto object-cover transform group-hover:scale-105 transition duration-500">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-6">
+                            <span class="text-xs font-bold uppercase tracking-wider text-emerald-400">Integrated Complex</span>
+                            <p class="text-white font-bold text-lg">State-of-the-Art Farming Infrastructure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Metrics Stats Bar -->
+    <section class="bg-white border-b border-gray-200 py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="border-r border-gray-100 last:border-0">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-brand-800">100%</p>
+                    <p class="text-sm font-medium text-gray-500 mt-1">Controlled Environment</p>
+                </div>
+                <div class="border-r border-gray-100 last:border-0">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-brand-800">Halal</p>
+                    <p class="text-sm font-medium text-gray-500 mt-1">Strict Certification</p>
+                </div>
+                <div class="border-r border-gray-100 last:border-0">
+                    <p class="text-3xl lg:text-4xl font-extrabold text-brand-800">Bulk</p>
+                    <p class="text-sm font-medium text-gray-500 mt-1">Wholesale Distribution</p>
+                </div>
+                <div>
+                    <p class="text-3xl lg:text-4xl font-extrabold text-brand-800">24/7</p>
+                    <p class="text-sm font-medium text-gray-500 mt-1">Cold-Chain Storage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. About Us Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 relative">
+                    <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                        <img src="Images/admin-building-original.jpg" alt="Milky Foods Corporate Office" class="w-full h-auto object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 hidden sm:block bg-brand-800 text-white p-6 rounded-xl shadow-xl max-w-xs">
+                        <p class="text-sm font-light italic">"Standardizing premium poultry production through modern biosecurity & hygienic processing in Pakistan."</p>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-block bg-brand-100 text-brand-800 font-semibold px-4 py-1 rounded-md text-sm">
+                        About Milky Foods & Poultry
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
+                        Established Commercial Poultry & Food Enterprise
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        <strong>Milky Foods and Poultry</strong> is a premier Pakistani agricultural and food production organization operating extensive poultry farming, processing, and wholesale supply operations. Built upon highest standards of biosecurity and animal care, we manage every phase from chick rearing to fresh meat delivery.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our integrated business model guarantees consistent quality, strict Halal compliance, and superior hygiene. Serving commercial businesses, distributors, retail outlets, and restaurants across the country, we are proud to contribute to Pakistan's food security and agricultural excellence.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Biosecure Facilities</h4>
+                                <p class="text-sm text-gray-500">Strict sanitation protocols across all housing.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-circle-check text-brand-600 text-xl mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Custom Feed Mill</h4>
+                                <p class="text-sm text-gray-500">Formulated nutrition for optimal flock health.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Our Poultry Farms Section -->
+    <section id="farms" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-100 text-brand-800 font-semibold px-4 py-1 rounded-md text-sm">Farm Operations</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Large-Scale Poultry Farming</h2>
+                <p class="text-gray-600">Managing expansive poultry farms designed according to global biosecurity standards to raise healthy, high-yield flocks.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-900">Modern Broiler & Layer Rearing</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Our commercial farms utilize automated environmental controls ensuring ideal growth conditions year-round. From climate-regulated sheds to clean automated drinking and feeding networks, our farm operations prioritize bird welfare, hygiene, and growth efficiency.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                            Automated environmental and temperature regulation
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                            Dedicated veterinary oversight and routine health monitoring
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700 font-medium">
+                            <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center text-xs"><i class="fa-solid fa-check"></i></span>
+                            Pure natural feed formulas free of harmful additives
+                        </li>
+                    </ul>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-lg border border-gray-200">
+                    <img src="Images/shed-interior-original.jpg" alt="Inside Poultry Shed" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Controlled Poultry Sheds Section -->
+    <section id="sheds" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 order-2 lg:order-1 rounded-2xl overflow-hidden shadow-2xl border border-gray-800">
+                    <img src="Images/equipment-original.jpg" alt="Automated Poultry Feeding Equipment" class="w-full h-auto object-cover">
+                </div>
+                <div class="lg:col-span-6 order-1 lg:order-2 space-y-6">
+                    <span class="bg-emerald-900/80 text-emerald-300 border border-emerald-700 font-semibold px-4 py-1 rounded-md text-sm">Precision Engineering</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Environmentally Controlled Poultry Sheds</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        To withstand Pakistan's seasonal climate variations, Milky Foods operates state-of-the-art closed housing systems. These controlled sheds regulate airflow, humidity, temperature, and lighting to provide an optimal stress-free habitat.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-6 pt-4">
+                        <div class="bg-gray-800/80 p-5 rounded-xl border border-gray-700">
+                            <i class="fa-solid fa-fan text-emerald-400 text-2xl mb-2"></i>
+                            <h4 class="font-bold text-white mb-1">Tunnel Ventilation</h4>
+                            <p class="text-xs text-gray-400">High-efficiency evaporative cooling pads & heavy exhaust fans.</p>
+                        </div>
+                        <div class="bg-gray-800/80 p-5 rounded-xl border border-gray-700">
+                            <i class="fa-solid fa-gears text-emerald-400 text-2xl mb-2"></i>
+                            <h4 class="font-bold text-white mb-1">Automated Lines</h4>
+                            <p class="text-xs text-gray-400">Pan feeding and nipple drinking lines reduce contamination risk.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. From Farm to Supply (Interactive Process) -->
+    <section id="process" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-100 text-brand-800 font-semibold px-4 py-1 rounded-md text-sm">Value Chain</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Complete Integrated Operation</h2>
+                <p class="text-gray-600">From grain formulation to commercial distribution, we manage the full farm-to-table lifecycle with absolute precision.</p>
+            </div>
+
+            <!-- Steps Grid -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-800 text-white font-extrabold text-xl rounded-xl flex items-center justify-center mb-4">01</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Feed Production</h3>
+                        <p class="text-sm text-gray-600 mb-4">Our specialized feed mill mixes high-grade grains to formulate balanced nutrients for flock growth.</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48 border border-gray-100">
+                        <img src="Images/feed-mill-original.jpg" alt="Feed Mill Processing" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-800 text-white font-extrabold text-xl rounded-xl flex items-center justify-center mb-4">02</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Controlled Farming</h3>
+                        <p class="text-sm text-gray-600 mb-4">Flocks are raised inside climate-managed biosecure sheds with continuous monitoring.</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48 border border-gray-100">
+                        <img src="Images/worker-monitoring-original.jpg" alt="Worker Monitoring Birds" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-800 text-white font-extrabold text-xl rounded-xl flex items-center justify-center mb-4">03</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Hygiene Protocols</h3>
+                        <p class="text-sm text-gray-600 mb-4">Staff enter production facilities through strict sanitation checkpoints and air showers.</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48 border border-gray-100">
+                        <img src="Images/hygiene-facility-original.jpg" alt="Sanitation & Hygiene Entrance" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-800 text-white font-extrabold text-xl rounded-xl flex items-center justify-center mb-4">04</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Hygienic Processing</h3>
+                        <p class="text-sm text-gray-600 mb-4">Modern processing lines perform Halal slaughtering and precision cutting under clean room conditions.</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48 border border-gray-100">
+                        <img src="Images/processing-facility-original.jpg" alt="Meat Processing Plant" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-800 text-white font-extrabold text-xl rounded-xl flex items-center justify-center mb-4">05</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Sealed Packaging</h3>
+                        <p class="text-sm text-gray-600 mb-4">Meat cuts are sealed in food-grade vacuum trays to retain freshness and preserve shelf life.</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48 border border-gray-100">
+                        <img src="Images/packaging-line-original.jpg" alt="Packaging Line" class="w-full h-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="bg-white rounded-2xl p-6 shadow-md border border-gray-100 flex flex-col justify-between hover:shadow-lg transition">
+                    <div>
+                        <div class="w-12 h-12 bg-brand-800 text-white font-extrabold text-xl rounded-xl flex items-center justify-center mb-4">06</div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Cold Storage & Logistics</h3>
+                        <p class="text-sm text-gray-600 mb-4">Stored at -18°C temperatures and dispatched in refrigerated supply vehicles to buyers.</p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden h-48 border border-gray-100">
+                        <img src="Images/cold-storage-original.jpg" alt="Cold Storage Warehouse" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6 & 7. Our Products Showcase Section -->
+    <section id="products" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-100 text-brand-800 font-semibold px-4 py-1 rounded-md text-sm">Fresh & Packaged Range</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Premium Fresh Poultry Products</h2>
+                <p class="text-gray-600">Explore our range of 100% Halal whole chicken, prime portion cuts, and commercial bulk packs.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition group">
+                    <div class="h-56 overflow-hidden bg-white">
+                        <img src="Images/whole-chicken-original.jpg" alt="Fresh Whole Chicken" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <span class="text-xs font-bold text-brand-700 bg-brand-50 px-2.5 py-1 rounded">100% Halal Fresh</span>
+                        <h3 class="text-xl font-bold text-gray-900">Whole Dressed Chicken</h3>
+                        <p class="text-xs text-gray-500">Hygienically cleaned and dressed whole broilers available in bulk or individual retail packaging.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition group">
+                    <div class="h-56 overflow-hidden bg-white">
+                        <img src="Images/chicken-cuts-original.jpg" alt="Prime Chicken Cuts" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <span class="text-xs font-bold text-brand-700 bg-brand-50 px-2.5 py-1 rounded">Portion Cuts</span>
+                        <h3 class="text-xl font-bold text-gray-900">Breast, Drumsticks & Wings</h3>
+                        <p class="text-xs text-gray-500">Precision cut chicken breasts, drumsticks, thighs, and wings tray-packed for quality retention.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition group">
+                    <div class="h-56 overflow-hidden bg-white">
+                        <img src="Images/packaged-product-original.jpg" alt="Vacuum Packaged Chicken Trays" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <span class="text-xs font-bold text-brand-700 bg-brand-50 px-2.5 py-1 rounded">Sealed Trays</span>
+                        <h3 class="text-xl font-bold text-gray-900">Commercial Tray Packs</h3>
+                        <p class="text-xs text-gray-500">Standardized retail tray packs ready for supermarket displays and bulk institutional distribution.</p>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-gray-50 rounded-2xl overflow-hidden border border-gray-200 shadow-sm hover:shadow-md transition group">
+                    <div class="h-56 overflow-hidden bg-white">
+                        <img src="Images/meat-display-original.jpg" alt="Retail Display Counter" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="p-5 space-y-2">
+                        <span class="text-xs font-bold text-brand-700 bg-brand-50 px-2.5 py-1 rounded">Retail & Wholesale</span>
+                        <h3 class="text-xl font-bold text-gray-900">Counter Fresh Meat</h3>
+                        <p class="text-xs text-gray-500">Daily supplied fresh cuts delivered directly to commercial butcher outlets and retail stores.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Wholesale Supply Section -->
+    <section id="wholesale" class="py-20 bg-brand-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="bg-brand-700 text-brand-100 font-semibold px-4 py-1 rounded-md text-sm">B2B Commercial Distribution</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">Wholesale Meat & Poultry Supply Solutions</h2>
+                    <p class="text-gray-300 leading-relaxed">
+                        Milky Foods and Poultry is equipped to serve major B2B clients including restaurant chains, hotel kitchens, food caterers, corporate cafeterias, and regional meat distributors across Pakistan.
+                    </p>
+
+                    <div class="grid sm:grid-cols-2 gap-4 pt-2">
+                        <div class="border border-brand-700 bg-brand-800/50 p-4 rounded-xl">
+                            <h4 class="font-bold text-emerald-400 text-lg mb-1">Bulk Volume Contracts</h4>
+                            <p class="text-xs text-gray-300">Reliable weekly or daily supply commitments at competitive wholesale pricing.</p>
+                        </div>
+                        <div class="border border-brand-700 bg-brand-800/50 p-4 rounded-xl">
+                            <h4 class="font-bold text-emerald-400 text-lg mb-1">Custom Portioning</h4>
+                            <p class="text-xs text-gray-300">Tailored cut specifications to match commercial culinary requirements.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-brand-900 font-bold px-6 py-3.5 rounded-xl shadow-lg transition">
+                            <i class="fa-solid fa-handshake"></i> Request B2B Wholesale Quote
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 rounded-2xl overflow-hidden border-4 border-brand-700 shadow-2xl">
+                    <img src="Images/infrastructure-original.jpg" alt="Bulk Feeds & Dispatch Facility" class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9 & 10. Quality & Hygiene Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                    <img src="Images/quality-inspection-original.jpg" alt="Quality Control Inspection" class="w-full h-auto object-cover">
+                </div>
+                <div class="lg:col-span-6 space-y-6">
+                    <span class="bg-red-100 text-red-700 font-semibold px-4 py-1 rounded-md text-sm">Uncompromising Quality</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Food Safety, Hygiene & Quality Inspection</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        We adhere to uncompromising sanitary standards throughout processing and storage. Our quality assurance team inspects meat samples at every stage to ensure compliance with national food authority regulations and Halal requirements.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                                <i class="fa-solid fa-hand-holding-medical"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Sanitation Barriers</h4>
+                                <p class="text-sm text-gray-500">Air showers, boot washing, and protective gear mandated for all operational personnel.</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-start gap-4">
+                            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 flex items-center justify-center font-bold text-lg flex-shrink-0">
+                                <i class="fa-solid fa-snowflake"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Continuous Cold Chain</h4>
+                                <p class="text-sm text-gray-500">Temperature-monitored blast freezing and refrigerated transport prevent bacterial growth.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11 & 12. Facilities & Infrastructure Gallery -->
+    <section id="facilities" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-brand-100 text-brand-800 font-semibold px-4 py-1 rounded-md text-sm">Our Infrastructure</span>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">World-Class Facilities Across Pakistan</h2>
+                <p class="text-gray-600">A visual tour of our extensive poultry sheds, administrative headquarters, feed mills, and processing centers.</p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden shadow border border-gray-100 group relative">
+                    <img src="Images/aerial-original.jpg" alt="Shed Complex Aerial" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-white text-sm font-semibold">Aerial View of Farm Complex</div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow border border-gray-100 group relative">
+                    <img src="Images/admin-building-original.jpg" alt="Corporate Building" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-white text-sm font-semibold">Corporate Administrative Office</div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow border border-gray-100 group relative">
+                    <img src="Images/feed-mill-original.jpg" alt="Feed Mill Machinery" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-white text-sm font-semibold">Automated Feed Production Mill</div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow border border-gray-100 group relative">
+                    <img src="Images/infrastructure-original.jpg" alt="Silos & Silo Towers" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-white text-sm font-semibold">Grain Storage Silos & Dispatch Zone</div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow border border-gray-100 group relative">
+                    <img src="Images/cold-storage-original.jpg" alt="Industrial Freezers" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-white text-sm font-semibold">-18°C Deep Cold Storage Facility</div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow border border-gray-100 group relative">
+                    <img src="Images/hygiene-facility-original.jpg" alt="Sanitation Passages" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                    <div class="absolute bottom-0 inset-x-0 bg-black/70 p-3 text-white text-sm font-semibold">Staff Sanitization & Hygiene Entrance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Why Choose Milky Foods -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="bg-emerald-900 text-emerald-300 border border-emerald-700 font-semibold px-4 py-1 rounded-md text-sm">Why Partner With Us</span>
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight">The Milky Foods Advantage</h2>
+                <p class="text-gray-400">Why leading commercial businesses and buyers trust us for their poultry requirements.</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-gray-800/60 p-6 rounded-2xl border border-gray-700 text-center space-y-3">
+                    <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mx-auto">
+                        <i class="fa-solid fa-kaaba"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">100% Halal Verified</h3>
+                    <p class="text-xs text-gray-400">Strict Islamic hand-slaughtering protocols conducted by trained certified professionals.</p>
+                </div>
+
+                <div class="bg-gray-800/60 p-6 rounded-2xl border border-gray-700 text-center space-y-3">
+                    <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mx-auto">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Reliable Bulk Delivery</h3>
+                    <p class="text-xs text-gray-400">Fleets of refrigerated trucks ensure timely distribution without breaking temperature chains.</p>
+                </div>
+
+                <div class="bg-gray-800/60 p-6 rounded-2xl border border-gray-700 text-center space-y-3">
+                    <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mx-auto">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">High Biosecurity</h3>
+                    <p class="text-xs text-gray-400">Isolated farm environments and rigorous sanitary checkpoints protect flock health.</p>
+                </div>
+
+                <div class="bg-gray-800/60 p-6 rounded-2xl border border-gray-700 text-center space-y-3">
+                    <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center text-2xl mx-auto">
+                        <i class="fa-solid fa-tag"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-white">Competitive Pricing</h3>
+                    <p class="text-xs text-gray-400">Direct farm-to-business model eliminates middlemen for best market rates.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 14. Contact & Inquiries Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <div class="lg:col-span-5 space-y-6">
+                    <span class="bg-brand-100 text-brand-800 font-semibold px-4 py-1 rounded-md text-sm">Get in Touch</span>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900">Contact Milky Foods & Poultry</h2>
+                    <p class="text-gray-600">Reach out to our B2B commercial sales team for bulk order pricing, farm visits, or partnership inquiries.</p>
+
+                    <div class="space-y-4 pt-2">
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="w-10 h-10 bg-brand-100 text-brand-800 rounded-lg flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Head Office & Farms</h4>
+                                <p class="text-xs text-gray-500">Punjab, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="w-10 h-10 bg-brand-100 text-brand-800 rounded-lg flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Phone / WhatsApp</h4>
+                                <p class="text-xs text-gray-500">+92 300 0000000</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 bg-white p-4 rounded-xl border border-gray-200 shadow-sm">
+                            <div class="w-10 h-10 bg-brand-100 text-brand-800 rounded-lg flex items-center justify-center text-lg font-bold">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900 text-sm">Email Address</h4>
+                                <p class="text-xs text-gray-500">info@milkyfoods.pk</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Send Wholesale Inquiry</h3>
+                    <form id="contact-form" class="space-y-4">
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-semibold text-gray-700 mb-1">Your Full Name</label>
+                                <input type="text" id="contact-name" required placeholder="e.g. Muhammad Ali" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none text-sm">
+                            </div>
+                            <div>
+                                <label for="contact-company" class="block text-sm font-semibold text-gray-700 mb-1">Company / Business Name</label>
+                                <input type="text" id="contact-company" placeholder="e.g. Fresh Mart Retailers" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none text-sm">
+                            </div>
+                        </div>
+
+                        <div class="grid sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="contact-phone" class="block text-sm font-semibold text-gray-700 mb-1">Phone Number (WhatsApp)</label>
+                                <input type="tel" id="contact-phone" required placeholder="+92 300 1234567" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none text-sm">
+                            </div>
+                            <div>
+                                <label for="contact-inquiry-type" class="block text-sm font-semibold text-gray-700 mb-1">Inquiry Type</label>
+                                <select id="contact-inquiry-type" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none text-sm bg-white">
+                                    <option>Wholesale Meat Order</option>
+                                    <option>Poultry Supply Dealership</option>
+                                    <option>Restaurant Supply Contract</option>
+                                    <option>General Corporate Inquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="contact-message" class="block text-sm font-semibold text-gray-700 mb-1">Message / Requirements</label>
+                            <textarea id="contact-message" rows="4" required placeholder="Specify estimated required quantities (kg/day), delivery location, etc." class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-600 focus:border-transparent outline-none text-sm"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brand-700 hover:bg-brand-800 text-white font-bold py-4 rounded-xl shadow-md transition flex items-center justify-center gap-2">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Inquiry
+                        </button>
+                        <p id="form-response" class="hidden text-center text-sm font-semibold text-emerald-700 mt-2">Thank you! Your inquiry has been received. Our sales team will contact you shortly.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 text-gray-400 py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8 pb-12 border-b border-gray-800">
+                <div class="space-y-4 md:col-span-2">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-800 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                            <i class="fa-solid fa-drumstick-bite"></i>
+                        </div>
+                        <span class="text-xl font-extrabold text-white tracking-tight">MILKY FOODS & POULTRY</span>
+                    </div>
+                    <p class="text-xs text-gray-400 max-w-md leading-relaxed">
+                        Leading commercial poultry producer, feed manufacturer, and wholesale fresh chicken meat supplier headquartered in Pakistan. Dedicated to biosecurity, high food standards, and 100% Halal compliance.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-sm">Quick Links</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#about" class="hover:text-white transition">About Corporate</a></li>
+                        <li><a href="#farms" class="hover:text-white transition">Poultry Farms</a></li>
+                        <li><a href="#sheds" class="hover:text-white transition">Controlled Sheds</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Fresh Meat Products</a></li>
+                        <li><a href="#wholesale" class="hover:text-white transition">Wholesale B2B</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-3 text-sm">Contact Info</h4>
+                    <p class="text-xs text-gray-400 mb-1">Punjab, Pakistan</p>
+                    <p class="text-xs text-gray-400 mb-1">Phone: +92 300 0000000</p>
+                    <p class="text-xs text-gray-400">Email: info@milkyfoods.pk</p>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+                <p>&copy; 1996 Milky Foods and Poultry. All Rights Reserved.</p>
+                <p>Authentic Commercial Pakistani Enterprise</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Simple JavaScript for interactivity -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Simple Form Submission handler
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const responseMsg = document.getElementById('form-response');
+            responseMsg.classList.remove('hidden');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
